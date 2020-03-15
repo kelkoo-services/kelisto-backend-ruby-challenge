@@ -62,5 +62,5 @@ To send us your code, you can:
 - Give access to your repository in Github.
 
 
-## 🤘 Execute
+## :v: Execute
 ruby menu.rb
