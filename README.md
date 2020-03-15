@@ -60,3 +60,7 @@ To send us your code, you can:
 
 - Make a fork of this repository, and send us a pull-request.
 - Give access to your repository in Github.
+
+
+## 🤘 Execute
+ruby menu.rb
