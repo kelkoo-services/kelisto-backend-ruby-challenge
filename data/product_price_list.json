@@ -1,0 +1,23 @@
+{
+  "ProductsPrice": [
+    {
+      "id": 1,
+      "price": 3.11,
+      "currency": "£",
+      "product_id": 1,
+      "active": true
+    },{
+      "id": 2,
+      "price": 5.00,
+      "currency": "£",
+      "product_id": 2,
+      "active": true
+    },{
+      "id": 3,
+      "price": 11.23,
+      "currency": "£",
+      "product_id": 3,
+      "active": true
+    }
+  ]
+}

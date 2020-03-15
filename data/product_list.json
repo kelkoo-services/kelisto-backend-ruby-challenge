@@ -1,0 +1,17 @@
+{
+  "Products": [
+    {
+      "id": 1,
+      "name": "Green Tea",
+      "code":  "GR1"
+    }, {
+      "id": 2,
+      "name": "Strawberries",
+      "code": "SR1"
+    }, {
+      "id": 3,
+      "name": "Coffee",
+      "code": "CF1"
+    }
+  ]
+}
