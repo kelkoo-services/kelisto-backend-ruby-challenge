@@ -2,7 +2,6 @@
 
 require 'csv'
 require_relative '../models/user'
-require 'byebug'
 
 class UserRepository
   def initialize(file_path)

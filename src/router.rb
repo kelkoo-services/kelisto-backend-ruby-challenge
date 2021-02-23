@@ -66,13 +66,10 @@ class Router
     puts '1 - Create new item'
     puts '2 - Edit item'
     puts '3 - Delete item'
-    puts '4 - Create new offer'
-    puts '5 - Edit offer'
-    puts '6 - Delete offer'
-    puts '7 - See all orders'
-    puts '8 - Create new client'
-    puts '9 - Edit client'
-    puts '10 - Delete client'
+    puts '4 - See all orders'
+    puts '5 - Create new client'
+    puts '6 - Edit client'
+    puts '7 - Delete client'
     puts '0 - Log out'
     puts "\n"
   end

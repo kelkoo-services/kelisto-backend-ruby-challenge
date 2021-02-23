@@ -5,7 +5,8 @@ class ViewUser
     print `clear`
     list_users
     users.each do |user|
-      if user.id == 1
+      if user.role == 'admin'
+        puts 'PRIVATE USER'
       else
         puts "#{user.id} - User: #{user.username} Password: ******"
       end

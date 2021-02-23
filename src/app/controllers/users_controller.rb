@@ -30,11 +30,16 @@ class UserController
 
   def edit
     display_users
-    index = @view.ask_for_index('edit')
-    username = @view.ask_for_element_new('username')
-    password = @view.ask_for_element_new('password')
-    role = 'client'
-    @user_repository.edit(index, username, password, role)
+    loop do
+      index = @view.ask_for_index('edit')
+      next unless (index <= @user_repository.all.length) && (index != 0)
+
+      username = @view.ask_for_element_new('username')
+      password = @view.ask_for_element_new('password')
+      role = 'client'
+      @user_repository.edit(index, username, password, role)
+      break
+    end
   end
 
   private

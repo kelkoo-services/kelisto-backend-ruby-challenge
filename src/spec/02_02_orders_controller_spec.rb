@@ -39,10 +39,10 @@ describe 'OrdersController', :_order do
 
   let(:orders) do
     [
-      [ "id", "items", "user", "total"],
-      [1,"GR1 | SR1 | GR1 | GR1 | CF1",2,22.45],
-      [2,"GR1 | GR1",2,3.11],
-      [3,"SR1 | SR1 | GR1 | SR1",2,16.61]
+      %w[id items user total],
+      [1, 'GR1 | SR1 | GR1 | GR1 | CF1', 2, 22.45],
+      [2, 'GR1 | GR1', 2, 3.11],
+      [3, 'SR1 | SR1 | GR1 | SR1', 2, 16.61]
     ]
   end
 
