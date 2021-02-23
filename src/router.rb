@@ -1,7 +1,7 @@
 class Router
   def initialize(controllers = {})
     @items_controller = controllers[:items_controller]
-    # @customers_controller = controllers[:customers_controller]
+    @users_controller = controllers[:users_controller]
     @sessions_controller = controllers[:sessions_controller]
     @orders_controller = controllers[:orders_controller]
     @running = true
@@ -30,13 +30,13 @@ class Router
     when 1 then @items_controller.add
     when 2 then @items_controller.edit
     when 3 then @items_controller.delete
-    when 4 then @offer_controller.add
-    when 5 then @offer_controller.edit
-    when 6 then @offer_controller.delete
-    when 7 then @order_controller.list
-    when 8 then @user_controller.add
-    when 9 then @user_controller.edit
-    when 10 then @user_controller.delete
+    when 4 then @offers_controller.add
+    when 5 then @offers_controller.edit
+    when 6 then @offers_controller.delete
+    when 7 then @orders_controller.list
+    when 8 then @users_controller.add
+    when 9 then @users_controller.edit
+    when 10 then @users_controller.delete
     when 0 then destroy_session
     else
       puts 'Please press any of the displayed numbers'
@@ -63,6 +63,7 @@ class Router
   end
 
   def display_admin_tasks
+    greetings_admin
     puts '1 - Create new item'
     puts '2 - Edit item'
     puts '3 - Delete item'
@@ -87,14 +88,14 @@ class Router
 
   def welcome
     puts '-------------------------------------------'
-    puts ' 🥑🍅🍖🍟        Welcome        🍟🍖🍅🥑'
+    puts ' 🍵🍓☕️          Welcome          ☕️🍓🍵'
     puts '-------------------------------------------'
     puts "\n"
   end
 
   def goodbye
     puts '-------------------------------------------'
-    puts ' 🥑🍅🍖🍟        Goodbye!       🍟🍖🍅🥑'
+    puts ' 🍵🍓☕️          Goodbye!         ☕️🍓🍵'
     puts '-------------------------------------------'
     puts "\n"
     stop
@@ -103,7 +104,17 @@ class Router
   def greetings
     puts "\n"
     puts '-------------------------------------------'
-    puts ' 🥑🍅🍖🍟          SHOP         🍟🍖🍅🥑'
+    puts ' 🍵🍓☕️            SHOP           ☕️🍓🍵'
+    puts '-------------------------------------------'
+    puts "\n"
+    puts 'What do you want to do next?'
+    puts "\n"
+  end
+
+  def greetings_admin
+    puts "\n"
+    puts '-------------------------------------------'
+    puts ' 🍵🍓☕️       CONTROL PANEL       ☕️🍓🍵'
     puts '-------------------------------------------'
     puts "\n"
     puts 'What do you want to do next?'

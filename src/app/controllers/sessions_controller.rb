@@ -11,7 +11,6 @@ class SessionsController
     password = @view.ask_for_password
     user = @repository.find_by_username(username)
     if user && user.password == password
-      @view.display_login_successfull(user.username)
       user
     else
       @view.display_wrong_credentials

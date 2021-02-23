@@ -1,13 +1,12 @@
 require_relative 'app/repositories/item_repository'
 require_relative 'app/controllers/items_controller'
 
-# require_relative 'app/repositories/customer_repository'
-# require_relative 'app/controllers/customers_controller'
-
 require_relative 'app/repositories/order_repository'
 require_relative 'app/controllers/orders_controller'
 
 require_relative 'app/repositories/user_repository'
+require_relative 'app/controllers/users_controller'
+
 require_relative 'app/controllers/sessions_controller'
 
 require_relative 'router'
@@ -18,10 +17,10 @@ items_controller = ItemsController.new(item_repository)
 
 # csv_file_customer = File.join(__dir__, 'data/customers.csv')
 # customer_repository = CustomerRepository.new(csv_file_customer)
-# customers_controller = CustomersController.new(customer_repository)
 
 csv_file_user = File.join(__dir__, 'data/users.csv')
 user_repository = UserRepository.new(csv_file_user)
+users_controller = UserController.new(user_repository)
 sessions_controller = SessionsController.new(user_repository)
 
 csv_file_order = File.join(__dir__, 'data/orders.csv')
@@ -30,7 +29,7 @@ orders_controller = OrdersController.new(item_repository, user_repository, order
 
 controllers = {
   sessions_controller: sessions_controller,
-  # customers_controller: customers_controller,
+  users_controller: users_controller,
   items_controller: items_controller,
   orders_controller: orders_controller
 }

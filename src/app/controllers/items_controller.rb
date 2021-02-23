@@ -13,9 +13,10 @@ class ItemsController
   end
 
   def add
-    code = @view_item.ask_for_element("code")
-    name = @view_item.ask_for_element("name")
-    price = @view_item.ask_for_element("price").to_f
+    @view_item.new_item
+    code = @view_item.ask_for_element('code')
+    name = @view_item.ask_for_element('name')
+    price = @view_item.ask_for_element('price').to_f
 
     item = Item.new(code: code, name: name, price: price)
     @item_repository.create(item)
@@ -23,17 +24,17 @@ class ItemsController
 
   def delete
     display_items
-    index = @view_item.ask_for_index("delete")
+    index = @view_item.ask_for_index('delete')
     @item_repository.destroy(index)
   end
 
   def edit
     unless @item_repository.all.empty?
       display_items
-      index = @view_item.ask_for_index("edit")
-      code = @view_item.ask_for_element_new("code")
-      name = @view_item.ask_for_element_new("name")
-      price = @view_item.ask_for_element_new("price").to_f
+      index = @view_item.ask_for_index('edit')
+      code = @view_item.ask_for_element_new('code')
+      name = @view_item.ask_for_element_new('name')
+      price = @view_item.ask_for_element_new('price').to_f
       @item_repository.edit(index, code, name, price)
     else
       @view_item.no_edit

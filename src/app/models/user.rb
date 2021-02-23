@@ -1,6 +1,5 @@
 class User
-  attr_reader :username, :password, :role
-  attr_accessor :id
+  attr_accessor :id, :username, :password, :role
 
   def self.header
     ['id', 'username', 'password', 'role']
@@ -14,7 +13,7 @@ class User
   end
 
   def to_row
-    [id, username, password]
+    [id, username, password, role]
   end
 
   def admin?

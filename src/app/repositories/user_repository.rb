@@ -1,5 +1,6 @@
 require 'csv'
 require_relative '../models/user'
+require 'byebug'
 
 class UserRepository
   def initialize(file_path)
@@ -23,6 +24,26 @@ class UserRepository
     end
   end
 
+  def create(user)
+    user.id = @next_id
+    @users << user
+    save_csv
+    @next_id += 1
+  end
+
+  def destroy(index)
+    @users.delete_at(index)
+    save_csv
+  end
+
+  def edit(index, username, password, role)
+    user = @users[index]
+    user.username = username
+    user.password = password
+    user.role = role
+    save_csv
+  end
+
   private
 
   def load_csv
@@ -37,7 +58,7 @@ class UserRepository
   def save_csv
     csv_options = { headers: :first_row, header_converters: :symbol }
     CSV.open(@csv_file_path, 'wb', csv_options) do |csv|
-      csv << admin.header
+      csv << User.header
       @users.each do |user|
         csv << user.to_row
       end
