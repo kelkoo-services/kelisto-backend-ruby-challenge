@@ -3,22 +3,18 @@ class Router
     @items_controller = controllers[:items_controller]
     # @customers_controller = controllers[:customers_controller]
     @sessions_controller = controllers[:sessions_controller]
-    # @orders_controller = controllers[:orders_controller]
+    @orders_controller = controllers[:orders_controller]
     @running = true
     @user = nil
   end
 
   def run
-
     while @running
       print `clear`
       welcome
       @user = @sessions_controller.create
 
       while @user
-        print `clear`
-        welcome
-        greetings
         @user.admin? ? display_admin_tasks : display_client_tasks
         action = gets.chomp.to_i
         print `clear`
@@ -31,16 +27,16 @@ class Router
 
   def route_admin_action(action)
     case action
-    when 1 then @meals_controller.list
-    when 2 then @meals_controller.add
-    when 3 then @meals_controller.delete
-    when 4 then @meals_controller.edit
-    when 5 then @customers_controller.list
-    when 6 then @customers_controller.add
-    when 7 then @customers_controller.delete
-    when 8 then @customers_controller.edit
-    when 9 then @orders_controller.add
-    when 10 then @orders_controller.list_undelivered_orders
+    when 1 then @items_controller.add
+    when 2 then @items_controller.edit
+    when 3 then @items_controller.delete
+    when 4 then @offer_controller.add
+    when 5 then @offer_controller.edit
+    when 6 then @offer_controller.delete
+    when 7 then @order_controller.list
+    when 8 then @user_controller.add
+    when 9 then @user_controller.edit
+    when 10 then @user_controller.delete
     when 0 then destroy_session
     else
       puts 'Please press any of the displayed numbers'
@@ -49,7 +45,7 @@ class Router
 
   def route_client_action(action)
     case action
-    when 1 then @orders_controller.new_order(@user)
+    when 1 then @orders_controller.add(@user)
     when 2 then @orders_controller.list_my_orders(@user)
     when 0 then goodbye
     else
@@ -82,7 +78,7 @@ class Router
   end
 
   def display_client_tasks
-    puts "\n"
+    greetings
     puts '1 - Create new order'
     puts '2 - View past orders'
     puts '0 - Stop and exit the program'
@@ -106,7 +102,9 @@ class Router
 
   def greetings
     puts "\n"
-    puts '------ 🍻🍴🍽 SHOP OPTIONS 🍽🍴🍻 ------'
+    puts '-------------------------------------------'
+    puts ' 🥑🍅🍖🍟          SHOP         🍟🍖🍅🥑'
+    puts '-------------------------------------------'
     puts "\n"
     puts 'What do you want to do next?'
     puts "\n"

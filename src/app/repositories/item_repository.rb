@@ -43,7 +43,7 @@ class ItemRepository
     csv_options = { headers: :first_row, header_converters: :symbol }
     CSV.foreach(@csv_file_path, csv_options) do |row|
       attributes = {
-        id: row[:id].to_i, code: row[:code], name: row[:name], price: row[:price].to_i
+        id: row[:id].to_i, code: row[:code], name: row[:name], price: row[:price].to_f
       }
       @items << Item.new(attributes)
     end

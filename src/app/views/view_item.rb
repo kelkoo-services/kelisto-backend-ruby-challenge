@@ -1,12 +1,16 @@
 class ViewItem
   def display(items)
+    print `clear`
+    greetings
     items.each_with_index do |item, index|
-      puts "#{index + 1} - #{item.name} - #{item.code} (￡#{item.price})"
+      puts "#{index + 1} - #{item.code} - #{item.name} (￡#{item.price})"
+      puts "\n"
     end
+    puts "\n"
   end
 
   def ask_for_element(element)
-    puts "What is the #{element} of the meal?"
+    puts "What is the #{element} of the item?"
     print "> "
     gets.chomp
   end
@@ -18,17 +22,19 @@ class ViewItem
   end
 
   def ask_for_element_new(element)
-    puts "What is the new #{element} of the meal?"
+    puts "What is the new #{element} of the item?"
     print "> "
     gets.chomp
   end
 
+  def no_edit
+    puts "There's no item to edit"
+  end
+
   def greetings
-    puts "--------------------------------------------"
-    puts "\n"
-    puts "  🍟🍖🍅🥑  👉 List of Items 👈  🍟🍖🍅🥑"
-    puts "\n"
-    puts "--------------------------------------------"
+    puts '-------------------------------------------'
+    puts ' 🥑🍅🍖🍟     List of Items      🍟🍖🍅🥑'
+    puts '-------------------------------------------'
     puts "\n"
   end
 end

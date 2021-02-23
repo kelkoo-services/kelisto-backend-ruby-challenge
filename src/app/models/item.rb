@@ -9,7 +9,7 @@ class Item
     @id = properties[:id]
     @name = properties[:name]
     @code = properties[:code]
-    @price = properties[:price].to_i
+    @price = properties[:price]
   end
 
   def to_row
