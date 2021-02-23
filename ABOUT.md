@@ -7,7 +7,7 @@ For this challenge, I used OOP for the development of the entire app. I worked o
 </p>
 
 
-#### 🚀Usage
+## 🚀Usage
 
 There are two types of users for this app.
 
