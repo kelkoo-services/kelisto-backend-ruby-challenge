@@ -2,7 +2,7 @@
 
 For this challenge I used OOP for the development of the entire app. I worked on a series of interfaces to guide the user to use the platform properly. In this case opening **app.rb** from the Terminal can trigger the star of the app.
 
-(Gif init)
+![](Resources/introduction.gif)
 
 #### 🚀Usage
 
@@ -17,6 +17,8 @@ password: password
 
 The client can scan food that is available and can check thier previous Checkout Carts.
 
+![](Resources/client.gif)
+
 (Gif client)
 
 - Admin
@@ -26,9 +28,16 @@ username: admin
 password: password
 ```
 
-The admin can create/edit/delete items and users. It also have the prvilege to see all the Checkout Carts available, no matter the user.
+The admin can create/edit/delete items and users.
 
-(Gif admin)
+![](Resources/admin1.gif)
+![](Resources/admin3.gif)
+
+
+It also have the prvilege to see all the Checkout Carts available, no matter the user.
+
+![](Resources/admin4.gif)
+
 
 ## 🥵 Challenge
 

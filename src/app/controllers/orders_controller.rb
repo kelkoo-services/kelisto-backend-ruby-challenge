@@ -7,7 +7,6 @@ require_relative '../views/view_order'
 require_relative '../views/view_item'
 require_relative '../views/view_session'
 require_relative '../models/order'
-require 'byebug'
 
 class OrdersController
   def initialize(item_repository, user_repository, order_repository)
