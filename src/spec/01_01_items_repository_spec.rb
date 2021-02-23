@@ -41,19 +41,19 @@ describe 'ItemRepository', :item do
     it 'GR1 should have a price of 3.11' do
       repo = ItemRepository.new(csv_path)
       loaded_items = elements(repo) || []
-      expect(loaded_items.find { |item| item if item.code == "GR1" }.price).to eq(3.11)
+      expect(loaded_items.find { |item| item if item.code == 'GR1' }.price).to eq(3.11)
     end
 
     it 'SR1 should have a price of 5' do
       repo = ItemRepository.new(csv_path)
       loaded_items = elements(repo) || []
-      expect(loaded_items.find { |item| item if item.code == "SR1" }.price).to eq(5)
+      expect(loaded_items.find { |item| item if item.code == 'SR1' }.price).to eq(5)
     end
 
     it 'CF1 should have a price of 11.23' do
       repo = ItemRepository.new(csv_path)
       loaded_items = elements(repo) || []
-      expect(loaded_items.find { |item| item if item.code == "CF1" }.price).to eq(11.23)
+      expect(loaded_items.find { |item| item if item.code == 'CF1' }.price).to eq(11.23)
     end
   end
 end
