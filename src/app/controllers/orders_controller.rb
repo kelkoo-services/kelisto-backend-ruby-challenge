@@ -39,14 +39,13 @@ class OrdersController
   end
 
   def total_amount(items_new)
+    promo1 = buy_one_get_one(1, items_new)
+    promo2 = discount_if_more_items(2, 3, items_new, 4.50)
+
     sum = 0
-    if buy_one_get_one(1, items_new, sum)
-      sum += buy_one_get_one(1, items_new, sum)
-    elsif discount_if_more_items(2, 3, items_new, 4.50, sum)
-      sum += discount_if_more_items(2, 3, items_new, 4.50, sum)
-    else
-      items_new.each { |item| sum += item.price }
-    end
+    items_new.each { |item| sum += item.price }
+    sum -= promo1 unless promo1.zero?
+    sum -= promo2 unless promo2.zero?
     sum
   end
 
@@ -63,24 +62,21 @@ class OrdersController
 
   private
 
-  def discount_if_more_items(index, cuantity, items, price, plus)
+  def discount_if_more_items(index, cuantity, items, price)
+    sum = 0
     if items.count(@item_repository.find(index)) >= cuantity
-      sum = plus
-      items.each { |item| sum += item.id == 2 ? price : item.price }
+      items.each { |item| sum += item.id == 2 ? (item.price - price) : 0 }
       sum
     else
-      false
+      0
     end
   end
 
-  def buy_one_get_one(index, items, plus)
-    sum = plus
+  def buy_one_get_one(index, items)
     if items.count(@item_repository.find(index)) >= 2
-      sum += -@item_repository.find(index).price
-      items.each { |item| sum += item.price }
-      sum
+      @item_repository.find(index).price
     else
-      false
+      0
     end
   end
 
