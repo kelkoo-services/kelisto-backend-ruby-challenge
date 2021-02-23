@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'csv'
 require_relative '../models/order'
 require_relative '../repositories/item_repository'

@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class Item
   attr_accessor :id, :code, :name, :price
 
   def self.header
-    ['id', 'code', 'name', 'price']
+    %w[id code name price]
   end
 
   def initialize(properties = {})

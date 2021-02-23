@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class User
   attr_accessor :id, :username, :password, :role
 
   def self.header
-    ['id', 'username', 'password', 'role']
+    %w[id username password role]
   end
 
   def initialize(attributes = {})

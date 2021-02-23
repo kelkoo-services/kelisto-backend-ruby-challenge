@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Router
   def initialize(controllers = {})
     @items_controller = controllers[:items_controller]
@@ -30,13 +32,10 @@ class Router
     when 1 then @items_controller.add
     when 2 then @items_controller.edit
     when 3 then @items_controller.delete
-    when 4 then @offers_controller.add
-    when 5 then @offers_controller.edit
-    when 6 then @offers_controller.delete
-    when 7 then @orders_controller.list
-    when 8 then @users_controller.add
-    when 9 then @users_controller.edit
-    when 10 then @users_controller.delete
+    when 4 then @orders_controller.list
+    when 5 then @users_controller.add
+    when 6 then @users_controller.edit
+    when 7 then @users_controller.delete
     when 0 then destroy_session
     else
       puts 'Please press any of the displayed numbers'

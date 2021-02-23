@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative '../repositories/user_repository'
 require_relative '../views/view_user'
 require_relative '../models/user'

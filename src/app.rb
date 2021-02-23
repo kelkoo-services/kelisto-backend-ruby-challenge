@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'app/repositories/item_repository'
 require_relative 'app/controllers/items_controller'
 

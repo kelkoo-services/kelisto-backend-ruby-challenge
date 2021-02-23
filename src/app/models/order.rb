@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class Order
   attr_accessor :id, :items, :user, :total
 
   def self.header
-    ['id', 'items', 'user', 'total']
+    %w[id items user total]
   end
 
   def initialize(properties = {})

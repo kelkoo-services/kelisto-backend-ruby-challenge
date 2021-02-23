@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ViewItem
   def display(items)
     print `clear`
@@ -11,19 +13,19 @@ class ViewItem
 
   def ask_for_element(element)
     puts "What is the #{element} of the item?"
-    print "> "
+    print '> '
     gets.chomp
   end
 
   def ask_for_index(element)
     puts "Which number do you want to #{element}?"
-    print "> "
+    print '> '
     gets.chomp.to_i - 1
   end
 
   def ask_for_element_new(element)
     puts "What is the new #{element} of the item?"
-    print "> "
+    print '> '
     gets.chomp
   end
 

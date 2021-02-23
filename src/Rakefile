@@ -1,33 +1,34 @@
-require "rspec/core/rake_task"
+# frozen_string_literal: true
+
+require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec) do |t|
-  t.rspec_opts = "--require ./bonus_formatter.rb --format BonusFormatter"
+  t.rspec_opts = '--require ./bonus_formatter.rb --format BonusFormatter'
 end
 
-desc "Look for style guide offenses in your code"
-task :rubocop do
-  sh "rubocop --format simple || true"
-end
+# desc "Look for style guide offenses in your code"
+# task :rubocop do
+#   sh "rubocop --format simple || true"
+# end
 
-desc "Launch tests for the item namespace only"
+desc 'Launch tests for the item namespace only'
 task :int_item do
-  sh "rspec -t item"
+  sh 'rspec -t item'
 end
 
-desc "Launch tests for the user namespace only"
+desc 'Launch tests for the user namespace only'
 task :int_user do
-  sh "rspec -t user"
+  sh 'rspec -t user'
 end
 
-
-desc "Launch tests for the order namespace only"
+desc 'Launch tests for the order namespace only'
 task :int_order do
-  sh "rspec -t _order"
+  sh 'rspec -t _order'
 end
 
-task default: [:rubocop, :spec]
+task default: %i[spec]
 
-task item: [:rubocop, :int_item]
+task item: %i[int_item]
 
-task user: [:rubocop, :int_user]
+task user: %i[int_user]
 
-task order: [:rubocop, :int_order]
+task order: %i[int_order]

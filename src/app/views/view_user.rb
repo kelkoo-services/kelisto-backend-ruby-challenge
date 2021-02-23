@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ViewUser
   def display(users)
     print `clear`

@@ -1,8 +1,9 @@
+# frozen_string_literal: true
+
 require 'io/console'
 
 # Sessions View
 class SessionsView
-
   def ask_for_username
     puts 'Username:'
     print '> '
@@ -13,7 +14,7 @@ class SessionsView
     puts "\n"
     puts 'Password:'
     print '> '
-    STDIN.noecho(&:gets).chomp
+    $stdin.noecho(&:gets).chomp
   end
 
   def display_wrong_credentials

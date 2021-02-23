@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ViewOrder
   def display(orders)
     all_orders
