@@ -1,0 +1,18 @@
+{
+  "name": "kelisto-backend-ruby-challenge",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Backend Ruby Challenge</h1> <div align=\"center\">   <div>     <a style=\"margin-right: 8px;\" href=\"https://github.com/kelkoo-services/kelisto-backend-ruby-challenge/pulls\"><img src=\"https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square\" /></a>   </div>   </br> </div>",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariana0pachon/kelisto-backend-ruby-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariana0pachon/kelisto-backend-ruby-challenge/issues"
+  },
+  "homepage": "https://github.com/mariana0pachon/kelisto-backend-ruby-challenge#readme"
+}
