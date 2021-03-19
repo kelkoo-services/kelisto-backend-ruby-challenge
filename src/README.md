@@ -1,5 +1,3 @@
-## About your solution
-
 ## Introduction
 
 First of all, thank you for letting me make this Challenge, which i really enjoied a lot, it made me learn some Ruby, because previously i have never made any project with it. Also practice more on Docker that i was very rusty lately.
@@ -37,8 +35,8 @@ There are 2 ways to test the data:
     1. Install **docker** if you don't have it.
     2. Go to root path in the project, where you can find the **main.rb** file.
         1. Open a command line and type: 
-            1. `docker build -t alejandrogarridoapp .`
-            2. `docker run alejandrogarridoapp ` and then give it some arguments! like this => `docker run alejandrogarridoapp GR1,GR1,SR1,CF1,SR1,SR1.SR1`, remember that when you pass arguments you must do it as the example **separated in commas and without spaces**.
+            1. `docker build -t AlejandroGarridoApp .`
+            2. `docker run AlejandroGarridoApp ` and then give it some arguments! like this => `docker run AlejandroGarridoApp GR1,GR1,SR1,CF1,SR1,SR1.SR1`, remember that when you pass arguments you must do it as the example **separated in commas and without spaces**.
 
 2. **Using ruby via command line**
     1. Install **ruby** if you don't have it.

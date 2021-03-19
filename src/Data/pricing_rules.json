@@ -1,0 +1,20 @@
+[
+    {
+        "ItemCode" : "GR1",
+        "Name" : "Green tea",
+        "Price" : "3.11",
+        "EspecialRule" : "buy-one-get-one-free"
+    },
+    {
+        "ItemCode" : "SR1",
+        "Name" : "Strawberries",
+        "Price" : "5.00",
+        "EspecialRule" : "buy-more-than-three"
+    },
+    {
+        "ItemCode" : "CF1",
+        "Name" : "Coffee",
+        "Price" : "11.23",
+        "EspecialRule" : null
+    }
+]
