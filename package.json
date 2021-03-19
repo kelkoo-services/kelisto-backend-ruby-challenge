@@ -5,6 +5,9 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},
+  "scripts": {
+    "execute": "node ./src/prompt.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mariana0pachon/kelisto-backend-ruby-challenge.git"
