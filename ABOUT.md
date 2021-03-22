@@ -32,7 +32,7 @@ Here we have the CheckoutController.php file. From here we call the 'createItems
 
 # Views
 
-We use the CheckoutView.php file for showing the interface to user. In the screen we can see the current products catalogue provided by the controller CheckourController.php.
+We use the CheckoutView.php file for showing the interface to user. In the screen we can see the current products catalogue provided by the controller CheckoutController.php.
 
 ---
 
