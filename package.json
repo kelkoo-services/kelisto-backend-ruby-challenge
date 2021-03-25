@@ -1,0 +1,23 @@
+{
+  "name": "kelisto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jasmine": "^3.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyling08/kelisto-backend-ruby-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heyling08/kelisto-backend-ruby-challenge/issues"
+  },
+  "homepage": "https://github.com/heyling08/kelisto-backend-ruby-challenge#readme"
+}
