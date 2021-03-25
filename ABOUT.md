@@ -1,4 +1,4 @@
-# :Shopping Cart: Kelisto Cart :Shopping Cart:
+# Kelisto Cart 💥
 
 Backend Ruby Challenge
 
@@ -12,7 +12,7 @@ $ npm init
 $ npx jasmine init
 ```
 
-## How was it done!? :Flexed Bicep:
+## How was it done!? 💭
 
 In the `src` folder we can find three files, in which:
 
