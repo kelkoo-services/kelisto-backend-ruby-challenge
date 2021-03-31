@@ -7,7 +7,7 @@ Ya que el enunciado del challenge está redactado en inglés, he realizado el pr
 INSTRUCCIONES PARA EJECUTAR EL CÓDIGO
     TypeScript necesita entorno Node.js para ejecutarse. (Ver la captura de pantalla Como ejecutar y resultado.JPG )
         Desde la consola de Node.js, acceder a la carpeta donde están los archivos.
-        Introducir "-node main".
+        Introducir "node main".
         Si se desean recompliar a JS los archivos TS tras introducir algún cambio, es necesario introducir antes el comando "tsc -t es5 main". Después, "node main".
 
 ENFOQUE
