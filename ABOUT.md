@@ -3,6 +3,7 @@
 Ya que el enunciado del challenge está redactado en inglés, he realizado el programa en inglés también. Este documento, sin embargo, lo escribo en español ya que es el idioma del correo con las explicaciones. En el propio código hay algunas explicaciones también sobre, por ejemplo, cómo podría escalarse una clase.
 
 ***El programa es funcional y supera los tests***
+Mi código está escrito en los archivos con extensión .ts (TypeScript). Los archivos .js son la traducción automática a JavaScript realizada por Node.js.
 
 INSTRUCCIONES PARA EJECUTAR EL CÓDIGO
     TypeScript necesita entorno Node.js para ejecutarse. (Ver la captura de pantalla Como ejecutar y resultado.JPG )
