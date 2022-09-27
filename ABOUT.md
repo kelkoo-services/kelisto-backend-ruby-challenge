@@ -7,3 +7,7 @@ My checkout has four commands; one to add a product to the basket `scan`, one to
 However, the interactive checkout has three commands more; one to run some tests `run_tests`, one to show the available commands `commands` and other to close the checkout `exit`.
 
 Mention that to make the interactive checkout, I have had to use a method that is an important security risk `eval` and I know that never it has to be used.
+
+#### Test
+
+My tests are a battery of 'tests' to check if my program is working well but they are not unit tests.
