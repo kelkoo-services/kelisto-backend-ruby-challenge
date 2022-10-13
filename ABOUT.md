@@ -1,20 +1,16 @@
 ## About your solution
 
+## Configuration
+
 Available products and discounts are configured on yml files inside *data* folder.
 
 There's a Data class (lib/data.rb) that will help loading these files, it will load and parse yml files to return products & discounts when needed.
 
 ## Cart
 
-Cart object receives discounts_rules on init, and then we can add products using
+Cart object receives discounts_rules on init, and then we can add products using `cart.scan 'XXX'` or `cart.add_product Product.find('XXXX')`
 
-> `cart.scan 'XXX'`
-
-or
-
-> `cart.add_product Product.find('XXXX')`
-
-both of them will add CartItem objects (on a hash by code, for easier/faster access) which holds product data & quantity for each product, and calcs total_price for that product type
+Both of them will add CartItem objects (on a hash by code, for easier/faster access) which holds product data & quantity for each product, and calcs total_price for that product type
 
 ## Discounts
 
@@ -32,3 +28,25 @@ I've created a Discounts::Manager as a service class, to help controlling all di
 * I've used a MassInitialize module helper which I've used on some classes to initialize attributes with a {attr: value, ...} hash (similar to ActiveRecord) instead of multiple ordered params
 * The discounts logic can be extended a lot, more discounts types, checks to avoid multiple discounts on same product, checks to apply only the best discount if multiple apply, ... but there's no time for all that stuff
 * I wanted separate data files (yml) for testing, so we can change/configure products & discounts without breaking the tests. Now Data.load_file checks for ENV['RACK_ENV'] which is initialized in the spec_helper file
+
+## Run the program
+
+It uses ruby-3.1, and also bundler to install rspec
+
+```
+bundle install --binstubs
+# run tests
+bin/rspec
+# enter interactive mode
+irb -r ./src/cart.rb
+```
+
+### or use docker
+
+```
+> docker build -t kelisto .
+> # start interactive irb to create/play with cart
+> docker -it kelisto run
+> # run rspec tests
+> docker run -it kelisto bin/rspec
+```
