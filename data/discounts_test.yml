@@ -1,0 +1,13 @@
+discounts:
+  - code: 'GT1F'
+    type: 'BuyXPayY'
+    name: '2X1 on Green Tea'
+    buy_qtt: 2
+    buy_product: 'GR1'
+    pay_qtt: 1
+  - code: 'SRB1'
+    type: BulkLowerPrice
+    name: 'Bulk price on Strawberries'
+    buy_qtt: 3
+    buy_product: SR1
+    bulk_price: 4.5

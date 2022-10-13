@@ -6,8 +6,9 @@ class Data
   class << self
     # reads a given yml file from data folder
     def load_file(fname, base_path = nil)
+      file_suffix = ENV.fetch('RACK_ENV', nil) == 'test' ? '_test' : ''
       base_path ||= File.expand_path('../../../data', __FILE__)
-      YAML.load_file(base_path+"/#{fname}.yml").fetch(fname)
+      YAML.load_file(base_path+"/#{fname}#{file_suffix}.yml").fetch(fname)
     end
 
     # similar to ActiveSupport index_by
