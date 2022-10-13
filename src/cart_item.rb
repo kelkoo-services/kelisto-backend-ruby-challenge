@@ -17,5 +17,7 @@ class CartItem
     (product.price * qtt).round(2)
   end
 
-
+  def to_s
+    sprintf("%-6s%-16.12s %2dx = %6.2f", code, name, qtt, total_price.round(2))
+  end
 end

@@ -1,7 +1,6 @@
 require_relative 'lib/data'
 require_relative 'lib/mass_initialize'
 
-
 class Product
   class InvalidCodeError < StandardError; end;
 
@@ -11,14 +10,9 @@ class Product
 
   # find, find_all (& maybe other methods) could also be on a ProductRepository class
   def self.find(code)
-    data = find_all[code]
+    data = Data.products[code]
     raise InvalidCodeError unless data
 
     self.new data
   end
-
-  def self.find_all
-    @products ||= Data.products
-  end
-
 end
